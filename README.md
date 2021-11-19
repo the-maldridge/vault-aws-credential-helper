@@ -9,3 +9,10 @@ page](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sourcing-ex
 
 You must export `VACH_VAULT_BLOB` to the environment as a path that
 points to the JSON blob from the Vault AWS Secrets backend.
+
+In your Vault Template file, you should specify the secret like below
+to ensure the JSON winds up in the right shape:
+
+```
+{{secret "aws/creds/my-app" | toJSON}}
+```

@@ -10,8 +10,7 @@ import (
 )
 
 type vaultBlob struct {
-	LeaseDuration time.Duration `json:"lease_duration"`
-	LeaseID       string        `json:"lease_id"`
+	LeaseID       string        `json:"LeaseID"`
 	Data          struct {
 		AccessKey     string `json:"access_key"`
 		SecretKey     string `json:"secret_key"`
